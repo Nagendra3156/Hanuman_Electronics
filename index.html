@@ -1,110 +1,135 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hanuman Electronics & Furniture</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanuman Electronics & Furniture</title>
 
+```
 <style>
-body { margin:0; font-family: 'Segoe UI', sans-serif; background:#f4f4f4; }
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+    }
 
-header {
-    background:linear-gradient(45deg,#b71c1c,#e53935);
-    color:white;
-    text-align:center;
-    padding:20px;
-}
+    /* Header */
+    header {
+        background: #d32f2f;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
 
-nav {
-    background:#111;
-    text-align:center;
-    padding:12px;
-}
-nav a {
-    color:white;
-    margin:15px;
-    text-decoration:none;
-    font-weight:600;
-}
+    nav {
+        background: #111;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 12px;
+    }
 
-.hero {
-    background:url('images/shop1.jpg') center/cover no-repeat;
-    height:350px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-size:32px;
-    font-weight:bold;
-}
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
-section { padding:40px; }
+    nav a:hover {
+        color: #ff5252;
+    }
 
-h2 { color:#c62828; }
+    /* Hero Section */
+    .hero {
+        height: 400px;
+        background: url('https://images.unsplash.com/photo-1582582494700-f8ce0b2b7a0d') center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
 
-.grid {
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-}
+    .hero::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+    }
 
-.card {
-    background:white;
-    width:260px;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
+    .hero h1 {
+        position: relative;
+        color: white;
+        font-size: 40px;
+        z-index: 1;
+    }
 
-.card img { width:100%; height:170px; object-fit:cover; }
+    /* Section */
+    .section {
+        padding: 40px 20px;
+    }
 
-.card h3 { padding:10px; }
+    .section h2 {
+        color: #d32f2f;
+        margin-bottom: 20px;
+    }
 
-.branches {
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-}
+    /* Products Grid */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
 
-.branch-card {
-    background:white;
-    width:320px;
-    padding:15px;
-    border-radius:12px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
+    .card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
 
-iframe { width:100%; height:200px; border:none; border-radius:10px; }
+    .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
 
-.gallery img {
-    width:300px;
-    margin:10px;
-    border-radius:10px;
-}
+    .card p {
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+    }
 
-.owner img {
-    width:180px;
-    border-radius:50%;
-}
+    /* WhatsApp Button */
+    .whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25D366;
+        color: white;
+        font-size: 22px;
+        padding: 15px;
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
 
-footer {
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:15px;
-}
+    .whatsapp:hover {
+        background: #1ebe5d;
+    }
 
-.whatsapp {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px;
-    border-radius:50%;
-    text-decoration:none;
-}
+    /* Footer */
+    footer {
+        background: #111;
+        color: white;
+        text-align: center;
+        padding: 15px;
+    }
 </style>
+```
+
 </head>
 
 <body>
@@ -115,72 +140,60 @@ footer {
 </header>
 
 <nav>
-    <a href="#products">Products</a>
-    <a href="#branches">Branches</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#owner">Owner</a>
-    <a href="#contact">Contact</a>
+    <a href="#">Products</a>
+    <a href="#">Branches</a>
+    <a href="#">Gallery</a>
+    <a href="#">Owner</a>
+    <a href="#">Contact</a>
 </nav>
 
-<div class="hero">
-    Best Deals for Your Home
-</div>
+<section class="hero">
+    <h1>Best Deals for Your Home</h1>
+</section>
 
-<section id="products">
+<!-- Electronics -->
+
+<section class="section">
     <h2>Electronics</h2>
     <div class="grid">
-        <div class="card"><img src="images/tv.jpg"><h3>Smart TVs</h3></div>
-        <div class="card"><img src="images/fridge.jpg"><h3>Refrigerators</h3></div>
-        <div class="card"><img src="images/washing-machine.jpg"><h3>Washing Machines</h3></div>
-        <div class="card"><img src="images/ac.jpg"><h3>Air Conditioners</h3></div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04">
+            <p>LED TVs</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518441902110-1c1c3a7f39b1">
+            <p>Refrigerators</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
+            <p>Washing Machines</p>
+        </div>
     </div>
+</section>
 
+<!-- Furniture -->
+
+<section class="section">
     <h2>Furniture</h2>
     <div class="grid">
-        <div class="card"><img src="images/sofa.jpg"><h3>Sofa Sets</h3></div>
-        <div class="card"><img src="images/bed.jpg"><h3>Beds</h3></div>
-        <div class="card"><img src="images/dining.jpg"><h3>Dining Tables</h3></div>
-        <div class="card"><img src="images/wardrobe.jpg"><h3>Wardrobes</h3></div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7">
+            <p>Sofas</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+            <p>Beds</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9">
+            <p>Dining Tables</p>
+        </div>
     </div>
 </section>
 
-<section id="branches">
-    <h2>Our Branches</h2>
-    <div class="branches">
+<!-- WhatsApp -->
 
-        <div class="branch-card">
-            <h3>Main Branch</h3>
-            <p>📍 Your Location</p>
-            <iframe src="https://www.google.com/maps?q=https://share.google/uR8LLNl9Asry937Xb&output=embed"></iframe>
-        </div>
-
-        <div class="branch-card">
-            <h3>Branch 2</h3>
-            <p>📍 Update address</p>
-            <iframe src="https://www.google.com/maps?q=Hyderabad&output=embed"></iframe>
-        </div>
-
-    </div>
-</section>
-
-<section id="gallery">
-    <h2>Our Shop</h2>
-    <img src="images/shop1.jpg">
-    <img src="images/shop2.jpg">
-</section>
-
-<section id="owner">
-    <h2>Proprietor</h2>
-    <img src="images/owner.jpg">
-    <p>Owner of Hanuman Electronics & Furniture</p>
-</section>
-
-<section id="contact">
-    <h2>Contact</h2>
-    <p>📞 888668866</p>
-</section>
-
-<a class="whatsapp" href="https://wa.me/91888668866">💬</a>
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬</a>
 
 <footer>
     <p>© 2026 Hanuman Electronics & Furniture</p>
