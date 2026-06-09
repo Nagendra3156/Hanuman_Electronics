@@ -1,203 +1,283 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hanuman Electronics & Furniture</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hanuman Electronics & Furniture</title>
 
-```
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f5f5f5;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-    /* Header */
-    header {
-        background: #d32f2f;
-        color: white;
-        text-align: center;
-        padding: 20px;
-    }
+body {
+    background: #f5f5f5;
+}
 
-    nav {
-        background: #111;
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        padding: 12px;
-    }
+/* Top Bar */
+.topbar {
+    background: #d32f2f;
+    color: white;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-    }
+/* Navbar */
+.navbar {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 
-    nav a:hover {
-        color: #ff5252;
-    }
+.navbar h2 {
+    color: #d32f2f;
+}
 
-    /* Hero Section */
-    .hero {
-        height: 400px;
-        background: url('https://images.unsplash.com/photo-1582582494700-f8ce0b2b7a0d') center/cover no-repeat;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-    }
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
 
-    .hero::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.5);
-    }
+.nav-links a:hover {
+    color: #d32f2f;
+}
 
-    .hero h1 {
-        position: relative;
-        color: white;
-        font-size: 40px;
-        z-index: 1;
-    }
+/* Hero */
+.hero {
+    height: 500px;
+    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
 
-    /* Section */
-    .section {
-        padding: 40px 20px;
-    }
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+}
 
-    .section h2 {
-        color: #d32f2f;
-        margin-bottom: 20px;
-    }
+.hero-content {
+    position: relative;
+    color: white;
+    max-width: 600px;
+}
 
-    /* Products Grid */
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
+.hero h1 {
+    font-size: 42px;
+}
 
-    .card {
-        background: white;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
+.hero span {
+    color: #ff5252;
+}
 
-    .card img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-    }
+.hero p {
+    margin: 15px 0;
+}
 
-    .card p {
-        padding: 10px;
-        text-align: center;
-        font-weight: bold;
-    }
+.btn {
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
 
-    /* WhatsApp Button */
-    .whatsapp {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #25D366;
-        color: white;
-        font-size: 22px;
-        padding: 15px;
-        border-radius: 50%;
-        text-align: center;
-        text-decoration: none;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
+.btn-red {
+    background: #d32f2f;
+    color: white;
+}
 
-    .whatsapp:hover {
-        background: #1ebe5d;
-    }
+.btn-green {
+    background: #25D366;
+    color: white;
+}
 
-    /* Footer */
-    footer {
-        background: #111;
-        color: white;
-        text-align: center;
-        padding: 15px;
-    }
+/* Section */
+.section {
+    padding: 50px 40px;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+/* Branch */
+.branch {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Gallery */
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Owner */
+.owner {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.owner img {
+    width: 120px;
+    border-radius: 50%;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+/* WhatsApp Floating */
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+}
 </style>
-```
-
 </head>
 
 <body>
 
-<header>
-    <h1>Hanuman Electronics & Furniture</h1>
-    <p>Quality Products | Trusted Service</p>
-</header>
+<div class="topbar">
+    <span>📞 8886686866</span>
+    <span>Quality Products | Trusted Service</span>
+</div>
 
-<nav>
-    <a href="#">Products</a>
-    <a href="#">Branches</a>
-    <a href="#">Gallery</a>
-    <a href="#">Owner</a>
-    <a href="#">Contact</a>
-</nav>
+<div class="navbar">
+    <h2>HANUMAN</h2>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Branches</a>
+        <a href="#">Gallery</a>
+        <a href="#">Owner</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
 
+<!-- Hero -->
 <section class="hero">
-    <h1>Best Deals for Your Home</h1>
+    <div class="hero-content">
+        <h1>Best Quality Products for <span>Your Home</span></h1>
+        <p>Electronics | Furniture | Appliances</p>
+        <button class="btn btn-red">Call Now</button>
+        <button class="btn btn-green">WhatsApp</button>
+    </div>
 </section>
 
 <!-- Electronics -->
-
 <section class="section">
     <h2>Electronics</h2>
     <div class="grid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04">
-            <p>LED TVs</p>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1518441902110-1c1c3a7f39b1">
-            <p>Refrigerators</p>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
-            <p>Washing Machines</p>
-        </div>
+        <div class="card"><img src="https://cdn-icons-png.flaticon.com/512/1042/1042334.png"><p>Smart TVs</p></div>
+        <div class="card"><img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png"><p>Refrigerators</p></div>
+        <div class="card"><img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png"><p>Washing Machines</p></div>
+        <div class="card"><img src="https://cdn-icons-png.flaticon.com/512/1046/1046792.png"><p>Air Conditioners</p></div>
     </div>
 </section>
 
 <!-- Furniture -->
-
 <section class="section">
     <h2>Furniture</h2>
     <div class="grid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7">
-            <p>Sofas</p>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
-            <p>Beds</p>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9">
-            <p>Dining Tables</p>
-        </div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7"><p>Sofa Sets</p></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511"><p>Beds</p></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9"><p>Dining Tables</p></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013"><p>Wardrobes</p></div>
     </div>
 </section>
 
-<!-- WhatsApp -->
+<!-- Branches -->
+<section class="section">
+    <h2>Our Branches</h2>
+    <div class="grid">
+        <div class="branch">Chandanagar, Hyderabad</div>
+        <div class="branch">Miyapur, Hyderabad</div>
+        <div class="branch">BHEL, Hyderabad</div>
+    </div>
+</section>
 
-<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬</a>
+<!-- Gallery -->
+<section class="section">
+    <h2>Gallery</h2>
+    <div class="grid gallery">
+        <img src="https://images.unsplash.com/photo-1582582494700-f8ce0b2b7a0d">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+        <img src="https://images.unsplash.com/photo-1567016526105-22da7c13d44c">
+    </div>
+</section>
+
+<!-- Owner -->
+<section class="section">
+    <h2>Proprietor</h2>
+    <div class="owner">
+        <img src="owner.jpg">
+        <p>
+            We provide best quality products with trust and service.
+            Thank you for choosing Hanuman Electronics & Furniture.
+        </p>
+    </div>
+</section>
 
 <footer>
     <p>© 2026 Hanuman Electronics & Furniture</p>
 </footer>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
 
 </body>
 </html>
