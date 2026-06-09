@@ -9,11 +9,11 @@
 body {
     font-family: Arial, sans-serif;
     margin:0;
-    background:#f5f5f5;
+    background:#f4f4f4;
 }
 
 header {
-    background:#d32f2f;
+    background:#c62828;
     color:white;
     text-align:center;
     padding:20px;
@@ -21,8 +21,8 @@ header {
 
 nav {
     background:#222;
-    text-align:center;
     padding:10px;
+    text-align:center;
 }
 
 nav a {
@@ -32,12 +32,19 @@ nav a {
     font-weight:bold;
 }
 
-section {
-    padding:30px;
+.hero {
+    background:url('images/shop1.jpg') center/cover no-repeat;
+    height:300px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:28px;
+    font-weight:bold;
 }
 
-h2 {
-    color:#d32f2f;
+section {
+    padding:30px;
 }
 
 .products {
@@ -48,23 +55,17 @@ h2 {
 
 .card {
     background:white;
+    width:250px;
     padding:15px;
     border-radius:10px;
-    width:250px;
     box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
 .card img {
     width:100%;
-    border-radius:8px;
+    border-radius:10px;
 }
 
-.owner img {
-    width:200px;
-    border-radius:50%;
-}
-
-/* Branch Cards */
 .branches {
     display:flex;
     flex-wrap:wrap;
@@ -73,17 +74,23 @@ h2 {
 
 .branch-card {
     background:white;
+    width:300px;
     padding:15px;
     border-radius:10px;
-    width:300px;
     box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
 iframe {
     width:100%;
     height:200px;
+    border-radius:10px;
     border:none;
-    border-radius:8px;
+}
+
+.gallery img {
+    width:300px;
+    margin:10px;
+    border-radius:10px;
 }
 
 footer {
@@ -93,7 +100,6 @@ footer {
     padding:15px;
 }
 
-/* WhatsApp Button */
 .whatsapp {
     position:fixed;
     bottom:20px;
@@ -102,7 +108,6 @@ footer {
     color:white;
     padding:15px;
     border-radius:50%;
-    font-size:20px;
     text-decoration:none;
 }
 </style>
@@ -111,55 +116,46 @@ footer {
 <body>
 
 <header>
-    <h1>Hanuman Electronics and Furnitures</h1>
+    <h1>Hanuman Electronics</h1>
     <p>Your Trusted Electronics Store</p>
 </header>
 
 <nav>
     <a href="#home">Home</a>
     <a href="#products">Products</a>
-    <a href="#owner">Owner</a>
     <a href="#branches">Branches</a>
+    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
 </nav>
 
-<section id="home">
-    <h2>Welcome</h2>
-    <p>We provide high-quality electronics and home appliances with trusted service.</p>
-</section>
+<div class="hero">
+    Best Deals on Electronics
+</div>
 
 <section id="products">
     <h2>Our Products</h2>
     <div class="products">
 
         <div class="card">
-            <img src="https://via.placeholder.com/250x150">
+            <img src="images/tv.jpg">
             <h3>Smart TVs</h3>
         </div>
 
         <div class="card">
-            <img src="https://via.placeholder.com/250x150">
+            <img src="images/fridge.jpg">
             <h3>Refrigerators</h3>
         </div>
 
         <div class="card">
-            <img src="https://via.placeholder.com/250x150">
+            <img src="images/washing-machine.jpg">
             <h3>Washing Machines</h3>
         </div>
 
         <div class="card">
-            <img src="https://via.placeholder.com/250x150">
+            <img src="images/ac.jpg">
             <h3>Air Conditioners</h3>
         </div>
 
-    </div>
-</section>
-
-<section id="owner">
-    <h2>Proprietor</h2>
-    <div class="owner">
-        <img src="owner.jpg" alt="Owner Photo">
-        <p>Owner details will be updated soon.</p>
     </div>
 </section>
 
@@ -168,40 +164,45 @@ footer {
 
     <div class="branches">
 
-        <!-- Main Branch -->
         <div class="branch-card">
             <h3>Main Branch</h3>
-            <p>📍 Asifabad Main Road, Besides Rose Garden</p>
-            <iframe src="https://share.google/uR8LLNl9Asry937Xb"></iframe>
+            <p>📍 Your Main Location</p>
+            <iframe src="https://www.google.com/maps?q=https://share.google/uR8LLNl9Asry937Xb&output=embed"></iframe>
         </div>
 
-        <!-- Branch 2 -->
         <div class="branch-card">
-            <h3>Asifabad Branch</h3>
-            <p>📍 Hanuman Electronics in Asifabad Market</p>
-            <iframe src="https://share.google/uR8LLNl9Asry937Xb"></iframe>
+            <h3>Branch 2</h3>
+            <p>📍 Add address</p>
+            <iframe src="https://www.google.com/maps?q=Hyderabad&output=embed"></iframe>
         </div>
 
-        <!-- Branch 3 -->
         <div class="branch-card">
-            <h3>Rebbena Branch</h3>
-            <p>📍 Hanuman Electronics Rebbena</p>
-            <iframe src="https://maps.app.goo.gl/di6pwQUfDK16K7TE9"></iframe>
+            <h3>Branch 3</h3>
+            <p>📍 Add address</p>
+            <iframe src="https://www.google.com/maps?q=Hyderabad&output=embed"></iframe>
         </div>
 
     </div>
 
 </section>
 
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p>📞 Phone: 9494306339</p>
+<section id="gallery">
+    <h2>Our Shop</h2>
+    <div class="gallery">
+        <img src="images/shop1.jpg">
+        <img src="images/shop2.jpg">
+    </div>
 </section>
 
-<a class="whatsapp" href="https://wa.me/9494306339" target="_blank">💬</a>
+<section id="contact">
+    <h2>Contact</h2>
+    <p>📞 888668866</p>
+</section>
+
+<a class="whatsapp" href="https://wa.me/91888668866">💬</a>
 
 <footer>
-    <p>© 2026 Hanuman Electronics. All Rights Reserved.</p>
+    <p>© 2026 Hanuman Electronics</p>
 </footer>
 
 </body>
