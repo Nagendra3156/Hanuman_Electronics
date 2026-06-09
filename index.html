@@ -1,231 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hanuman Electronics & Furniture</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanuman Electronics and Furnitures</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+        body {
+            background: #f5f5f5;
+        }
 
-body {
-    background: #f5f5f5;
-}
+        /* Header */
+        header {
+            background: #0d47a1;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
 
-/* Top Bar */
-.topbar {
-    background: #d32f2f;
-    color: white;
-    padding: 8px 20px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-}
+        header h1 {
+            margin-bottom: 5px;
+        }
 
-/* Navbar */
-.navbar {
-    background: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #0d47a1, #1976d2);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
 
-.navbar h2 {
-    color: #d32f2f;
-}
+        .hero h2 {
+            margin-bottom: 10px;
+        }
 
-.nav-links a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-}
+        /* Section */
+        .section {
+            padding: 30px;
+        }
 
-.nav-links a:hover {
-    color: #d32f2f;
-}
+        .section h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
 
-/* Hero */
-.hero {
-    height: 500px;
-    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 50px;
-}
+        /* Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    top: 0;
-    left: 0;
-}
+        /* Card */
+        .card {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: 0.3s;
+        }
 
-.hero-content {
-    position: relative;
-    color: white;
-    max-width: 600px;
-}
+        .card:hover {
+            transform: scale(1.05);
+        }
 
-.hero h1 {
-    font-size: 42px;
-}
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
 
-.hero span {
-    color: #ff5252;
-}
+        .card p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
 
-.hero p {
-    margin: 15px 0;
-}
+        /* Owner Section */
+        .owner {
+            text-align: center;
+            padding: 30px;
+            background: white;
+        }
 
-.btn {
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
-}
+        .owner img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
 
-.btn-red {
-    background: #d32f2f;
-    color: white;
-}
+        /* Branches */
+        .branches {
+            padding: 30px;
+        }
 
-.btn-green {
-    background: #25D366;
-    color: white;
-}
+        .branch {
+            background: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
 
-/* Section */
-.section {
-    padding: 50px 40px;
-}
+        /* Contact */
+        .contact {
+            background: #e3f2fd;
+            padding: 30px;
+            text-align: center;
+        }
 
-.section h2 {
-    margin-bottom: 20px;
-}
+        footer {
+            background: #0d47a1;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap: 20px;
-}
+        .whatsapp-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
 
-.card {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.card img {
-    width: 100%;
-    height: 150px;
-    object-fit: contain;
-}
-
-/* Branch */
-.branch {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-/* Gallery */
-.gallery img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* Owner */
-.owner {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.owner img {
-    width: 120px;
-    border-radius: 50%;
-}
-
-/* Footer */
-footer {
-    background: #111;
-    color: white;
-    padding: 30px;
-    margin-top: 40px;
-}
-
-/* WhatsApp Floating */
-.whatsapp {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 20px;
-    text-decoration: none;
-}
-</style>
+    </style>
 </head>
 
 <body>
 
-<div class="topbar">
-    <span>📞 8886686866</span>
-    <span>Quality Products | Trusted Service</span>
-</div>
+<header>
+    <h1>Hanuman Electronics</h1>
+    <p>📞 888668866</p>
+</header>
 
-<div class="navbar">
-    <h2>HANUMAN</h2>
-    <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">Products</a>
-        <a href="#">Branches</a>
-        <a href="#">Gallery</a>
-        <a href="#">Owner</a>
-        <a href="#">Contact</a>
-    </div>
-</div>
-
-<!-- Hero -->
 <section class="hero">
-    <div class="hero-content">
-        <h1>Best Quality Products for <span>Your Home</span></h1>
-        <p>Electronics | Furniture | Appliances</p>
-        <button class="btn btn-red">Call Now</button>
-        <button class="btn btn-green">WhatsApp</button>
-    </div>
+    <h2>Your One Stop Shop for Electronics & Furniture</h2>
+    <p>Best Quality | Trusted Service</p>
 </section>
 
 <!-- Electronics -->
 <section class="section">
     <h2>Electronics</h2>
     <div class="grid">
-        <div class="card"><img src="https://cdn-icons-png.flaticon.com/512/1042/1042334.png"><p>Smart TVs</p></div>
-        <div class="card"><img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png"><p>Refrigerators</p></div>
-        <div class="card"><img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png"><p>Washing Machines</p></div>
-        <div class="card"><img src="https://cdn-icons-png.flaticon.com/512/1046/1046792.png"><p>Air Conditioners</p></div>
+
+        <div class="card">
+            <img src="images/tv.jpg">
+            <p>Smart TVs</p>
+        </div>
+
+        <div class="card">
+            <img src="images/fridge.jpg">
+            <p>Refrigerators</p>
+        </div>
+
+        <div class="card">
+            <img src="images/washing-machine.jpg">
+            <p>Washing Machines</p>
+        </div>
+
+        <div class="card">
+            <img src="images/ac.jpg">
+            <p>Air Conditioners</p>
+        </div>
+
     </div>
 </section>
 
@@ -233,51 +181,72 @@ footer {
 <section class="section">
     <h2>Furniture</h2>
     <div class="grid">
-        <div class="card"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7"><p>Sofa Sets</p></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511"><p>Beds</p></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9"><p>Dining Tables</p></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013"><p>Wardrobes</p></div>
-    </div>
-</section>
 
-<!-- Branches -->
-<section class="section">
-    <h2>Our Branches</h2>
-    <div class="grid">
-        <div class="branch">Chandanagar, Hyderabad</div>
-        <div class="branch">Miyapur, Hyderabad</div>
-        <div class="branch">BHEL, Hyderabad</div>
-    </div>
-</section>
+        <div class="card">
+            <img src="images/sofa.jpg">
+            <p>Sofa Sets</p>
+        </div>
 
-<!-- Gallery -->
-<section class="section">
-    <h2>Gallery</h2>
-    <div class="grid gallery">
-        <img src="https://images.unsplash.com/photo-1582582494700-f8ce0b2b7a0d">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-        <img src="https://images.unsplash.com/photo-1567016526105-22da7c13d44c">
+        <div class="card">
+            <img src="images/bed.jpg">
+            <p>Beds</p>
+        </div>
+
+        <div class="card">
+            <img src="images/dining.jpg">
+            <p>Dining Tables</p>
+        </div>
+
+        <div class="card">
+            <img src="images/wardrobe.jpg">
+            <p>Wardrobes</p>
+        </div>
+
     </div>
 </section>
 
 <!-- Owner -->
-<section class="section">
+<section class="owner">
     <h2>Proprietor</h2>
-    <div class="owner">
-        <img src="owner.jpg">
-        <p>
-            We provide best quality products with trust and service.
-            Thank you for choosing Hanuman Electronics & Furniture.
-        </p>
+    <img src="owner.jpg" alt="Owner Photo">
+    <p>Owner Name (Update Later)</p>
+</section>
+
+<!-- Branches -->
+<section class="branches">
+    <h2>Our Branches</h2>
+
+    <div class="branch">
+        <p>Main Branch - Asifabad</p>
     </div>
+
+    <div class="branch">
+        <p>Branch 2 - Asifabad Market Road</p>
+    </div>
+
+    <div class="branch">
+        <p>Branch 3 - Rebbena</p>
+    </div>
+
+</section>
+
+<!-- Contact -->
+<section class="contact">
+    <h2>Contact Us</h2>
+    <p>📞 9494306339</p>
+
+    <a class="whatsapp-btn" href="https://wa.me/9494306339">
+        Chat on WhatsApp
+    </a>
+
+    <p style="margin-top:15px;">
+        📍 Location will be updated
+    </p>
 </section>
 
 <footer>
-    <p>© 2026 Hanuman Electronics & Furniture</p>
+    <p>© 2026 Hanuman Electronics</p>
 </footer>
-
-<!-- WhatsApp -->
-<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
 
 </body>
 </html>
