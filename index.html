@@ -3,51 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hanuman Electronics</title>
+<title>Hanuman Electronics & Furniture</title>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:#f4f4f4;
-}
+body { margin:0; font-family: 'Segoe UI', sans-serif; background:#f4f4f4; }
 
 header {
-    background:#c62828;
+    background:linear-gradient(45deg,#b71c1c,#e53935);
     color:white;
     text-align:center;
     padding:20px;
 }
 
 nav {
-    background:#222;
-    padding:10px;
+    background:#111;
     text-align:center;
+    padding:12px;
 }
-
 nav a {
     color:white;
     margin:15px;
     text-decoration:none;
-    font-weight:bold;
+    font-weight:600;
 }
 
 .hero {
     background:url('images/shop1.jpg') center/cover no-repeat;
-    height:300px;
+    height:350px;
     display:flex;
     align-items:center;
     justify-content:center;
     color:white;
-    font-size:28px;
+    font-size:32px;
     font-weight:bold;
 }
 
-section {
-    padding:30px;
-}
+section { padding:40px; }
 
-.products {
+h2 { color:#c62828; }
+
+.grid {
     display:flex;
     flex-wrap:wrap;
     gap:20px;
@@ -55,16 +50,15 @@ section {
 
 .card {
     background:white;
-    width:250px;
-    padding:15px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    width:260px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-.card img {
-    width:100%;
-    border-radius:10px;
-}
+.card img { width:100%; height:170px; object-fit:cover; }
+
+.card h3 { padding:10px; }
 
 .branches {
     display:flex;
@@ -74,18 +68,13 @@ section {
 
 .branch-card {
     background:white;
-    width:300px;
+    width:320px;
     padding:15px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-iframe {
-    width:100%;
-    height:200px;
-    border-radius:10px;
-    border:none;
-}
+iframe { width:100%; height:200px; border:none; border-radius:10px; }
 
 .gallery img {
     width:300px;
@@ -93,8 +82,13 @@ iframe {
     border-radius:10px;
 }
 
+.owner img {
+    width:180px;
+    border-radius:50%;
+}
+
 footer {
-    background:#222;
+    background:#111;
     color:white;
     text-align:center;
     padding:15px;
@@ -116,82 +110,69 @@ footer {
 <body>
 
 <header>
-    <h1>Hanuman Electronics</h1>
-    <p>Your Trusted Electronics Store</p>
+    <h1>Hanuman Electronics & Furniture</h1>
+    <p>Quality Products | Trusted Service</p>
 </header>
 
 <nav>
-    <a href="#home">Home</a>
     <a href="#products">Products</a>
     <a href="#branches">Branches</a>
     <a href="#gallery">Gallery</a>
+    <a href="#owner">Owner</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <div class="hero">
-    Best Deals on Electronics
+    Best Deals for Your Home
 </div>
 
 <section id="products">
-    <h2>Our Products</h2>
-    <div class="products">
+    <h2>Electronics</h2>
+    <div class="grid">
+        <div class="card"><img src="images/tv.jpg"><h3>Smart TVs</h3></div>
+        <div class="card"><img src="images/fridge.jpg"><h3>Refrigerators</h3></div>
+        <div class="card"><img src="images/washing-machine.jpg"><h3>Washing Machines</h3></div>
+        <div class="card"><img src="images/ac.jpg"><h3>Air Conditioners</h3></div>
+    </div>
 
-        <div class="card">
-            <img src="images/tv.jpg">
-            <h3>Smart TVs</h3>
-        </div>
-
-        <div class="card">
-            <img src="images/fridge.jpg">
-            <h3>Refrigerators</h3>
-        </div>
-
-        <div class="card">
-            <img src="images/washing-machine.jpg">
-            <h3>Washing Machines</h3>
-        </div>
-
-        <div class="card">
-            <img src="images/ac.jpg">
-            <h3>Air Conditioners</h3>
-        </div>
-
+    <h2>Furniture</h2>
+    <div class="grid">
+        <div class="card"><img src="images/sofa.jpg"><h3>Sofa Sets</h3></div>
+        <div class="card"><img src="images/bed.jpg"><h3>Beds</h3></div>
+        <div class="card"><img src="images/dining.jpg"><h3>Dining Tables</h3></div>
+        <div class="card"><img src="images/wardrobe.jpg"><h3>Wardrobes</h3></div>
     </div>
 </section>
 
 <section id="branches">
     <h2>Our Branches</h2>
-
     <div class="branches">
 
         <div class="branch-card">
             <h3>Main Branch</h3>
-            <p>📍 Your Main Location</p>
+            <p>📍 Your Location</p>
             <iframe src="https://www.google.com/maps?q=https://share.google/uR8LLNl9Asry937Xb&output=embed"></iframe>
         </div>
 
         <div class="branch-card">
             <h3>Branch 2</h3>
-            <p>📍 Add address</p>
-            <iframe src="https://www.google.com/maps?q=Hyderabad&output=embed"></iframe>
-        </div>
-
-        <div class="branch-card">
-            <h3>Branch 3</h3>
-            <p>📍 Add address</p>
+            <p>📍 Update address</p>
             <iframe src="https://www.google.com/maps?q=Hyderabad&output=embed"></iframe>
         </div>
 
     </div>
-
 </section>
 
 <section id="gallery">
     <h2>Our Shop</h2>
-    <div class="gallery">
-        <img src="images/shop1.jpg">
-        <img src="images/shop2.jpg">
-    </div>
+    <img src="images/shop1.jpg">
+    <img src="images/shop2.jpg">
+</section>
+
+<section id="owner">
+    <h2>Proprietor</h2>
+    <img src="images/owner.jpg">
+    <p>Owner of Hanuman Electronics & Furniture</p>
 </section>
 
 <section id="contact">
@@ -202,7 +183,7 @@ footer {
 <a class="whatsapp" href="https://wa.me/91888668866">💬</a>
 
 <footer>
-    <p>© 2026 Hanuman Electronics</p>
+    <p>© 2026 Hanuman Electronics & Furniture</p>
 </footer>
 
 </body>
